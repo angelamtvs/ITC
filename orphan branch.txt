@@ -1,0 +1,10 @@
+If you want to share your branch with someone else with no history, you can do that by creating an orphan branch. An orphan branch is a separate branch that starts with a different root commit. So the first commit in this branch will be the root of this branch without having any history.  It can be accomplished by using the Git checkout command with the ––orphan option.
+
+git checkout --orphan <branch name>
+Note:
+This command is useful whenever you need an independent branch without any relation to any other available branches.
+
+
+Merging orphan branches is still possible, but ony with the --allow-unrelated-histories option:
+
+git merge --allow-unrelated-histories a b
